@@ -1,0 +1,40 @@
+.nav-links{
+         
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+    
+}
+.width{
+  width: 100%;
+  }
+  .ewidth{
+      width:70%
+  }
+  
+  .margin{
+      margin-top: 10px;
+  }
+  .heading{
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+      text-decoration: underline ;
+  }
+  .heading1{
+    font-family: 'Oswald', sans-serif;
+    text-decoration: underline ;
+}
+
+  .links{
+      margin-left: 30px;
+  }
+  .space{
+      margin-top: 20px;
+  }
+  .adduser{
+      float:left;
+  }
+ 
+  

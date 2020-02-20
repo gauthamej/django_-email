@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div>
+    <h3 class="heading space">USERS</h3>
+</div>
+
+    <div class="container">
+      <div class="">
+      <a href="{% url 'register' %}"><p class="text-body float-right font-weight-bold"> +ADD USER</p></a>
+      </div>
+        <table id="table_id" class="table table-striped table-bordered">
+            <thead>
+              <tr>
+               
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>User type</th>
+                <th>Actions</th>
+
+              </tr>
+            </thead>
+            <tbody>
+                {% for User in userlist %}
+              <tr>
+                <td>{{ User.name }}</td>
+                <td>{{ User.email }}</td>
+                <td>{{ User.phone_number }}</td>
+                <td> {{ User.user_type }}</td>
+                <td><a href="{% url 'delete' id=User.id %}"><i class="fa fa-trash"></i></a> 
+                  <a href="{% url 'edit' id=User.id  %}"><i class="fas fa-edit ml-5"></i></a></td>
+                    
+              </tr>
+            
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+
+   
+
+{% endblock %}
